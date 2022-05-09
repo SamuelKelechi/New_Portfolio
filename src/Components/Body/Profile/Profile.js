@@ -1,15 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components'
 import Bg from '../../Images/bg.jpg'
 import Experience from './Experience/Experience';
 import Hero from './Hero/Hero';
+import Work from './Process/Work'
+import Education from './Education/Education'
 
 const Profile = () => {
+
   return (
     <MainContainer>
         <MainWrap>
             <Hero />
             <Experience />
+            <Education />
+            <Work />
         </MainWrap>
 
     </MainContainer>

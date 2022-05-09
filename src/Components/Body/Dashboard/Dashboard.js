@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import Rating from './Ratings/Rate';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -9,11 +9,21 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CircleIcon from '@mui/icons-material/Circle';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import Profile from '../../Images/b11.png'
+import {FaBars, FaTimes} from 'react-icons/fa'
 
 function Dashboard() {
+    const [click, setClick] = useState(false);
+
+    const handClick = () => {
+        setClick(!click)
+    }
+
   return (
-    <MainContainer>
+      <>
+    <Mobile  onClick={handClick}>{click ?<FaTimes />:<FaBars />}</Mobile>
+    <MainContainer onClick={handClick} click={click}>
         <TopFixed>
+        
             <TopHold>
                 <Avart src={Profile}/>
                 <Bulb>
@@ -135,6 +145,7 @@ function Dashboard() {
             </span>
         </BottomFixed>
     </MainContainer>
+    </>
   )
 }
 
@@ -146,7 +157,19 @@ const MainContainer = styled.div`
     position: relative;
 
     @media screen and (max-width: 860px){
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        padding-right: 0;
+        top:0px;
+        /* height: 80vh; */
+        justify-content: flex-start;
+        width: 100%;
+        background: #101522;
+        left: ${({click}) => (click? 0 : '-100%')};
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1200;
     }
 `
 const TopFixed = styled.div`
@@ -159,6 +182,11 @@ const TopFixed = styled.div`
     align-items: center;
     position: fixed;
     z-index: 100;
+
+    @media screen and (max-width: 860px){
+        width: 100%;
+        position: relative;
+    }
 `
 const TopHold = styled.div`
     text-align: center;
@@ -196,6 +224,9 @@ const BottomFixed = styled.div`
           }
       }
     }
+    @media screen and (max-width: 860px){
+        width: 60%;
+    }
 `
 const Avart = styled.img`
     height: 100px;
@@ -216,6 +247,10 @@ const MiddleScroll = styled.div`
     top: 272px;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 860px){
+        top: 20px;
+    }
 `
 const MiddleWrap = styled.div`
     width: 80%;
@@ -287,4 +322,17 @@ const Circle = styled.div`
     margin-top: -25px;
     margin-right: -73px;
     border-radius: 100%;
+`
+const Mobile = styled.div`
+  display: none;
+
+  @media screen and (max-width: 860px){
+  display: flex;
+  font-size: 22px;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  transform: translate(-100%, 60%);
+  z-index: 1300;
+}
 `
