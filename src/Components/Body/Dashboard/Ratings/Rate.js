@@ -14,7 +14,9 @@ const Rate = (props) => {
     <Example label="Default">
         <CircularProgressbar
          value={props.percentage} 
-         text={`${props.percentage}%`} 
+         text={`${props.percentage}%`}
+        //  minValue={props.min} 
+        //  maxValue={props.max}
          styles={buildStyles({
             textColor: "grey",
             pathColor: "#FFC107",

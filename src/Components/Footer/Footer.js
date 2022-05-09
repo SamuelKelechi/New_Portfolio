@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <>
     <Main>
+     
 
     </Main>
 
@@ -21,5 +22,7 @@ const Main = styled.div`
     position: fixed;
     bottom: 0;
     z-index: 100;
+
+ 
 `
 

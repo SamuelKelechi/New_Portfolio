@@ -33,4 +33,8 @@ const GeneralWrap = styled.div`
   width: 97%;
   background-color: 1E1E28;
   height: 90vh;
+
+  @media screen and (max-width: 425px){
+    width: 100%;
+  }
 `
