@@ -1,13 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import Rating from './Ratings/Rate'
+import Rating from './Ratings/Rate';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import CircleIcon from '@mui/icons-material/Circle';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import Profile from '../../Images/b11.png'
 
 function Dashboard() {
   return (
     <MainContainer>
         <TopFixed>
             <TopHold>
-                <Avart />
+                <Avart src={Profile}/>
+                <Bulb>
+                    <Circle />
+                </Bulb>
                 <Name>SAMUEL KELECHI</Name>
                 <p>Full Stack Developer</p>
             </TopHold>
@@ -35,26 +46,93 @@ function Dashboard() {
                 <Ratings>
                     <Rate>
                         <Rating percentage="90"/>
-                        English
+                        Front-End
                     </Rate>
                     <Rate>
-                    <Rating percentage="70"/>
-                    French
+                        <Rating percentage="70"/>
+                        Back-End
                     </Rate> 
                     <Rate>
-                    <Rating percentage="40"/>
-                    German
+                        <Rating percentage="40"/>
+                        DevOps
                     </Rate>
                 </Ratings>
                 <br />
                 <Line></Line>
                 <br />
+                <Stacks>
+                    <div>
+                        HTML
+                    </div>
+                    <div>
+                        CSS
+                    </div>
+                    <div>
+                        Javascript
+                    </div>
+                    <div>
+                        React
+                    </div>
+                    <div>
+                        Nodejs
+                    </div>
+                    <div>
+                        Docker
+                    </div>
+                </Stacks>
+                <br />
+                <Line></Line>
+                <br />
+                <OtherStacks>
+                    <span>
+                        <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
+                        Redux, Context API, Material UI, Styled-Components, PWA...
+                    </span>
+                    <br/>
+                    <br/>
+                    <span>
+                        <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
+                        ExpressJS, MongoDB, Firebase, 
+                    </span>
+                    <br/>
+                    <br/>
+                    <span>
+                        <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
+                        LAMP, CI/CD, Git/GitHub, Heroku 
+                    </span>
+                </OtherStacks>
+                <br />
+                <Line></Line>
+                <br />
+                <CV>
+                 DOWNLOAD CV <FileDownloadIcon />
+                </CV>
 
             </MiddleWrap>
         </MiddleScroll>
 
         <BottomFixed>
+            <span>
+                <a href='' target='_blank' >
+                    <LinkedInIcon />
+                </a>
 
+                <a href='' target='_blank' >
+                    <FacebookIcon />
+                </a>
+
+                <a href='' target='_blank' >
+                    <TwitterIcon />
+                </a>
+
+                <a href='' target='_blank' >
+                    <GitHubIcon />
+                </a>
+
+                <a href='' target='_blank' >
+                    <WhatsAppIcon />
+                </a>
+            </span>
         </BottomFixed>
     </MainContainer>
   )
@@ -66,6 +144,10 @@ const MainContainer = styled.div`
     width: 25%;
     height: auto;
     position: relative;
+
+    @media screen and (max-width: 860px){
+        display: none;
+    }
 `
 const TopFixed = styled.div`
     height: 250px;
@@ -95,25 +177,45 @@ const BottomFixed = styled.div`
     height: 50px;
     width: 24.2%;
     position: fixed;
+    display: flex;
+    justify-content: center;
+
+    span{
+      width: 80%;
+      height: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a{
+        color: inherit;
+
+          :hover{
+              color: grey;
+          }
+      }
+    }
 `
 const Avart = styled.img`
     height: 100px;
     width: 100px;
     border-radius: 100%;
     background-color: white;
+    object-fit: cover;
+    object-position: top;
+
 `
 const Name = styled.div``
 
 const MiddleScroll = styled.div`
     width: 100%;
-    height: auto;
-    min-height: 100vh;
+    height: 780px;
     background-color: #20202A;
     position: relative;
-    top: 275px;
+    top: 272px;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
 `
 const MiddleWrap = styled.div`
     width: 80%;
@@ -149,4 +251,40 @@ const Rate = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+`
+
+const Stacks = styled.div`
+    
+    div{
+        margin-top: 10px;
+    }
+`
+
+const OtherStacks = styled.div`
+    color: grey;
+    width: 100%;
+`
+const CV = styled.div`
+    display: flex;
+    color: grey;
+    font-size: 13px;
+    cursor: pointer;
+
+    :hover{
+        color: white;
+    }
+`
+const Bulb = styled.div`
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center
+`
+const Circle = styled.div`
+    height: 10px;
+    width: 10px;
+    background-color: #FFC107;
+    margin-top: -25px;
+    margin-right: -73px;
+    border-radius: 100%;
 `
