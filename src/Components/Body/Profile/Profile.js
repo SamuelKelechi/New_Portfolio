@@ -3,13 +3,21 @@ import styled from 'styled-components'
 import Bg from '../../Images/bg.jpg'
 import Experience from './Experience/Experience';
 import Hero from './Hero/Hero';
+import Work from './Process/Work'
+import Education from './Education/Education'
 
 const Profile = () => {
+
   return (
     <MainContainer>
         <MainWrap>
             <Hero />
+            <br/>
             <Experience />
+            <br/>
+            <Education />
+            <br/>
+            <Work />
         </MainWrap>
 
     </MainContainer>
@@ -34,7 +42,7 @@ const MainContainer = styled.div`
 `
 const MainWrap = styled.div`
     width: 95%;
-    margin-top: 60px;
+    margin-top: 40px;
     padding: 20px 0 20px 0;
 
     @media screen and (max-width: 425px){
