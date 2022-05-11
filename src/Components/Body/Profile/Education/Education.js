@@ -58,6 +58,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
     font-weight: bold;
     text-align: center;
+    font-size: 18px;
 `
 const Card = styled.div`
     height: 150px;
@@ -65,6 +66,11 @@ const Card = styled.div`
     background-color: #2C2C38;
     margin: 10px 10px 10px 0;
     padding-left: 10px;
+
+    :hover {
+        background-color: #1F1F29;
+        border: 1px solid whitesmoke;
+    }
 `
 const Top = styled.div`
     font-weight: bold;
@@ -80,10 +86,14 @@ const Bottom = styled.div`
 `
 
 const Line = styled.div`
-    width: 40%;
+    width: 35%;
     border: 1px solid #AC8411;
     margin-bottom: 10px;
     margin-top: 5px;
+    
+    :hover {
+        border: 1px solid whitesmoke;
+    }
 `
 const Down = styled.div`
     width: 100%;

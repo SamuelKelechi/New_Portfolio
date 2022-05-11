@@ -15,7 +15,7 @@ function Work() {
         <>
         <br/>
         <div class="HowHolder"> 
-            <div class="How">How i Work</div>
+            <div class="How">HOW I WORK</div>
             <div class="BorderLine"></div>
         </div>
         <div class="hexagonWrapper">

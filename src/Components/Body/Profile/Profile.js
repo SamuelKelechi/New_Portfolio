@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import Bg from '../../Images/bg.jpg'
 import Experience from './Experience/Experience';
@@ -12,8 +12,11 @@ const Profile = () => {
     <MainContainer>
         <MainWrap>
             <Hero />
+            <br/>
             <Experience />
+            <br/>
             <Education />
+            <br/>
             <Work />
         </MainWrap>
 
@@ -39,7 +42,7 @@ const MainContainer = styled.div`
 `
 const MainWrap = styled.div`
     width: 95%;
-    margin-top: 60px;
+    margin-top: 40px;
     padding: 20px 0 20px 0;
 
     @media screen and (max-width: 425px){
