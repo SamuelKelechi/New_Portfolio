@@ -71,6 +71,11 @@ const Card = styled.div`
         background-color: #1F1F29;
         border: 1px solid whitesmoke;
     }
+
+    @media screen and (max-width: 425px){
+        padding-left: 5;
+        margin: 10px 0 10px 0;
+    }
 `
 const Top = styled.div`
     font-weight: bold;

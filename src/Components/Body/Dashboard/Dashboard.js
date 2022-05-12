@@ -8,8 +8,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CircleIcon from '@mui/icons-material/Circle';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import Profile from '../../Images/b11.png'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import Profile from '../../Images/b11.png';
+import {FaBars, FaTimes} from 'react-icons/fa';
+import SAMCV from '../../Images/cv.pdf'
 
 function Dashboard() {
     const [click, setClick] = useState(false);
@@ -70,29 +71,6 @@ function Dashboard() {
                 <br />
                 <Line></Line>
                 <br />
-                <Stacks>
-                    <div>
-                        HTML
-                    </div>
-                    <div>
-                        CSS
-                    </div>
-                    <div>
-                        Javascript
-                    </div>
-                    <div>
-                        React
-                    </div>
-                    <div>
-                        Nodejs
-                    </div>
-                    <div>
-                        Docker
-                    </div>
-                </Stacks>
-                <br />
-                <Line></Line>
-                <br />
                 <OtherStacks>
                     <span>
                         <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
@@ -111,35 +89,32 @@ function Dashboard() {
                         LAMP, CI/CD, Git/GitHub, Heroku 
                     </span>
                 </OtherStacks>
-                <br />
                 <Line></Line>
-                <br />
                 <CV>
-                 DOWNLOAD CV <FileDownloadIcon />
+                    <a href={SAMCV} download="CV">DOWNLOAD CV <FileDownloadIcon /></a>
                 </CV>
-
             </MiddleWrap>
         </MiddleScroll>
 
         <BottomFixed>
             <span>
-                <a href='' target='_blank' >
+                <a href='https://www.linkedin.com/in/samuel-kelechi/' target='_blank' >
                     <LinkedInIcon />
                 </a>
 
-                <a href='' target='_blank' >
+                <a href='https://web.facebook.com/skelechi3' target='_blank' >
                     <FacebookIcon />
                 </a>
 
-                <a href='' target='_blank' >
+                <a href='https://twitter.com/Samuel_Kelechi1' target='_blank' >
                     <TwitterIcon />
                 </a>
 
-                <a href='' target='_blank' >
+                <a href='https://github.com/SamuelKelechi' target='_blank' >
                     <GitHubIcon />
                 </a>
 
-                <a href='' target='_blank' >
+                <a href="https://wa.me/2348137253138"  rel="noopener noreferrer" target='_blank' >
                     <WhatsAppIcon />
                 </a>
             </span>
@@ -153,8 +128,6 @@ export default Dashboard;
 
 const MainContainer = styled.div`
     width: 25%;
-    height: auto;
-    position: relative;
 
     @media screen and (max-width: 860px){
         display: flex;
@@ -162,7 +135,6 @@ const MainContainer = styled.div`
         position: absolute;
         padding-right: 0;
         top:0px;
-        /* height: 80vh; */
         justify-content: flex-start;
         width: 100%;
         background: #101522;
@@ -171,9 +143,13 @@ const MainContainer = styled.div`
         transition: all 0.5s ease;
         z-index: 1200;
     }
+
+    @media screen and (max-width: 425px){
+        height: 100vh;
+    }
 `
 const TopFixed = styled.div`
-    height: 250px;
+    height: 40vh;
     background-color: #252530;
     width: 24.2%;
     top: 20px;
@@ -185,7 +161,9 @@ const TopFixed = styled.div`
 
     @media screen and (max-width: 860px){
         width: 100%;
-        position: relative;
+        position: fixed;
+        top: 0;
+        height: 190px;
     }
 `
 const TopHold = styled.div`
@@ -202,7 +180,7 @@ const BottomFixed = styled.div`
     background-color: #24242F;
     position: absolute;
     bottom: 20px;
-    height: 50px;
+    height: 7vh;
     width: 24.2%;
     position: fixed;
     display: flex;
@@ -226,6 +204,23 @@ const BottomFixed = styled.div`
     }
     @media screen and (max-width: 860px){
         width: 60%;
+        bottom: 0;
+    }
+    @media screen and (max-width: 768px){
+        width: 100%;
+        justify-content: flex-start;
+
+        span{
+            width: 60%;
+            justify-content: space-evenly;
+        }
+    }
+    @media screen and (max-width: 425px){
+        width: 100%;
+        bottom: 0;
+        span{
+            width: 100%;
+        }
     }
 `
 const Avart = styled.img`
@@ -240,23 +235,29 @@ const Avart = styled.img`
 const Name = styled.div``
 
 const MiddleScroll = styled.div`
-    width: 100%;
-    height: 780px;
+    width: 24.2%;
+    height: 65vh;
     background-color: #20202A;
-    position: relative;
+    position: fixed;
     top: 272px;
     display: flex;
     justify-content: center;
 
     @media screen and (max-width: 860px){
-        top: 20px;
+        width: 100%;
+        top: 180px;
+        height: 70vh;
+    }
+
+    @media screen and (max-width: 860px){
+        top: 185px;
     }
 `
 const MiddleWrap = styled.div`
     width: 80%;
 `
 const Locate = styled.div`
-    margin-top: 20px;
+    margin-top: 10px;
 `
 
 const Hold = styled.div`
@@ -298,15 +299,23 @@ const Stacks = styled.div`
 const OtherStacks = styled.div`
     color: grey;
     width: 100%;
+    margin-bottom: 15px;
 `
 const CV = styled.div`
     display: flex;
     color: grey;
     font-size: 13px;
     cursor: pointer;
+    margin-top: 8px;
 
     :hover{
         color: white;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+        display: flex;
     }
 `
 const Bulb = styled.div`

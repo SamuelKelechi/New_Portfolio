@@ -5,6 +5,7 @@ import Experience from './Experience/Experience';
 import Hero from './Hero/Hero';
 import Work from './Process/Work'
 import Education from './Education/Education'
+import Projects from './Projects/Projects';
 
 const Profile = () => {
 
@@ -18,6 +19,8 @@ const Profile = () => {
             <Education />
             <br/>
             <Work />
+            <br/>
+            <Projects />
         </MainWrap>
 
     </MainContainer>
