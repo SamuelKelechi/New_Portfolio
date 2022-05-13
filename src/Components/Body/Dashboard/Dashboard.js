@@ -30,7 +30,7 @@ function Dashboard() {
                 <Bulb>
                     <Circle />
                 </Bulb>
-                <Name>SAMUEL KELECHI</Name>
+                <Name>SAMUEL KELECHI U.</Name>
                 <p>Full Stack Developer</p>
             </TopHold>
         </TopFixed>
@@ -69,9 +69,10 @@ function Dashboard() {
                     </Rate>
                 </Ratings>
                 <br />
-                <Line></Line>
-                <br />
+               
                 <OtherStacks>
+                    <Line></Line>
+                    <br />
                     <span>
                         <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
                         Redux, Context API, Material UI, Styled-Components, PWA...
@@ -245,12 +246,8 @@ const MiddleScroll = styled.div`
 
     @media screen and (max-width: 860px){
         width: 100%;
-        top: 180px;
-        height: 70vh;
-    }
-
-    @media screen and (max-width: 860px){
         top: 185px;
+        height: 70vh;
     }
 `
 const MiddleWrap = styled.div`
@@ -284,22 +281,20 @@ const Ratings = styled.div`
 `
 
 const Rate = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-`
-
-const Stacks = styled.div`
-    
-    div{
-        margin-top: 10px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const OtherStacks = styled.div`
     color: grey;
     width: 100%;
     margin-bottom: 15px;
+    display: none;
+
+    @media screen and (max-width: 425px){
+        display: block;
+    }
 `
 const CV = styled.div`
     display: flex;
