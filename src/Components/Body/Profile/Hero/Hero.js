@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Typist from 'react-text-typist';
 import Bg from '../../../Images/bg.jpg';
 import Profile from '../../../Images/img.png'
 
@@ -8,13 +8,13 @@ const Hero = () => {
   return (
     <MainContain>
       <Wrapper>
-
         <Left>
           <Title>Discover My Amazing <br/> Tech Space!</Title>
           <br />
-          <span>
-            I build Web Applications
-          </span>
+          <Type>
+            I build
+            <Typist style={{marginLeft:'5px'}} sentences={["Web Applications", "Application Programming Interfaces(API's)", "Third Sentence"]} loop={true} />
+          </Type>
           <br />
           <br />
           <Btn>Contact</Btn>
@@ -90,4 +90,6 @@ const Btn = styled.div`
   @media screen and (max-width: 680px){
       margin-bottom: 30px;
     }
+`
+const Type = styled.div`
 `
