@@ -21,9 +21,11 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.2",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.28.1",
     "react-text-typist": "^1.1.4",
     "react-toastify": "^8.2.0",
     "react-visibility-sensor": "^5.1.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
     "v8": "^0.1.0",
     "web-vitals": "^2.1.4"

@@ -4,9 +4,20 @@ import Rating from '@mui/material/Rating';
 import EDHF from './Images/Logo.png';
 import GS from './Images/Logo1.png';
 import UD from './Images/Logo2.png';
+import LotsLogo from './Images/lots.png';
+import DataL from './Images/data1.png';
+import UtacLogo from './Images/utac.png';
+
 import Udeme from './Images/udeme.jpg';
 import Great from './Images/Great.jpg';
 import Elisha from './Images/Elisha.jpg';
+import CodeLab from './Images/codelab.jpg';
+import Teens from './Images/teens.jpg';
+import UTAC from './Images/utac.jpg';
+import LOTS from './Images/lots.jpg';
+import Data from './Images/data.jpg';
+import Report from './Images/report.jpg';
+
 
 
 
@@ -28,7 +39,7 @@ const Projects = () => {
                         <Top>
                             <Left>
                                 <h3>ELISHA FOUNDATION</h3>
-                                <p>A platform for an NGO</p>
+                                <p>A Platform for an NGO</p>
                             </Left>
                             <Right src={EDHF}/>
                         </Top>
@@ -36,7 +47,7 @@ const Projects = () => {
                         <Avat src={Elisha}/>
 
                         <Bottom> 
-                            <Rating name="read-only" value={value} readOnly />
+                            <Rating name="read-only" defaultValue={2.5} precision={5.0} readOnly />
                         </Bottom>
                     </Wrap>
                 </Card>
@@ -56,7 +67,7 @@ const Projects = () => {
                         <Avat src={Great}/>
 
                         <Bottom> 
-                            <Rating name="read-only" value={value} readOnly />
+                            <Rating name="read-only" defaultValue={2.5} precision={5.0} readOnly />
                         </Bottom>
                     </Wrap>
                 </Card>
@@ -68,12 +79,54 @@ const Projects = () => {
                     <Top>
                         <Left>
                             <h3>UDEME'S KITCHEN</h3>
-                            <p>A food ordering Application</p>
+                            <p>A Food Ordering Application</p>
                         </Left>
                         <Right src={UD}/>
                     </Top>
 
                     <Avat src={Udeme}/>
+
+                    <Bottom> 
+                        <Rating name="read-only" defaultValue={2.5} precision={5.0} readOnly/>
+                    </Bottom>
+                </Wrap>
+            </Card>
+            </a>
+
+            {toggle ? (
+                <>
+            <a href='https://codelab-home.web.app/' target='_blank'>
+            <Card>
+                <Wrap>
+                    <Top>
+                        <Left>
+                            <h3>CODELAB</h3>
+                            <p>CodeLab Official Platform</p>
+                        </Left>
+                        <Right />
+                    </Top>
+
+                    <Avat src={CodeLab}/>
+
+                    <Bottom> 
+                        <Rating name="half-rating-read" defaultValue={2.5} precision={5.0} readOnly />
+                    </Bottom>
+                </Wrap>
+            </Card>
+            </a>
+            
+            <a href='https://utacngo.web.app/' target='_blank'>
+            <Card>
+                <Wrap>
+                    <Top>
+                        <Left>
+                            <h3>UTAC</h3>
+                            <p>An NGO Web Platform</p>
+                        </Left>
+                        <Right src={UtacLogo}/>
+                    </Top>
+
+                    <Avat src={UTAC}/>
 
                     <Bottom> 
                         <Rating name="read-only" value={value} readOnly />
@@ -82,115 +135,85 @@ const Projects = () => {
             </Card>
             </a>
 
-            {toggle ? (
-                <>
+            <a href='https://schoolproject-e54ac.web.app/' target='_blank'>
             <Card>
                 <Wrap>
                     <Top>
                         <Left>
-                            <h3>TITLE</h3>
-                            <p>description</p>
+                            <h3>TEENS PROJECT</h3>
+                            <p>A Cloned Learning App</p>
                         </Left>
                         <Right />
                     </Top>
 
-                    <Avat />
+                    <Avat src={Teens}/>
 
                     <Bottom> 
                         <Rating name="read-only" value={value} readOnly />
                     </Bottom>
                 </Wrap>
             </Card>
+            </a>
 
+            <a href='https://security-dev-project.web.app/' target='_blank'>
             <Card>
                 <Wrap>
                     <Top>
                         <Left>
-                            <h3>TITLE</h3>
-                            <p>description</p>
+                            <h3>SECURITY APP</h3>
+                            <p>A Community Report App</p>
                         </Left>
                         <Right />
                     </Top>
 
-                    <Avat />
+                    <Avat src={Report}/>
 
                     <Bottom> 
-                        <Rating name="read-only" value={value} readOnly />
+                        <Rating name="half-rating-read" defaultValue={2.5} precision={4.5} readOnly />
                     </Bottom>
                 </Wrap>
             </Card>
-
+            </a>
+            
+            <a href='https://lotsngo.web.app/' target='_blank'>
             <Card>
                 <Wrap>
                     <Top>
                         <Left>
-                            <h3>TITLE</h3>
-                            <p>description</p>
+                            <h3>LOTS FOUNDATION</h3>
+                            <p>A Charity Organization App</p>
                         </Left>
-                        <Right />
+                        <Right src={LotsLogo}/>
                     </Top>
 
-                    <Avat />
+                    <Avat src={LOTS}/>
 
                     <Bottom> 
-                        <Rating name="read-only" value={value} readOnly />
+                        <Rating name="half-rating-read" defaultValue={2.5} precision={4.5} readOnly />
                     </Bottom>
                 </Wrap>
             </Card>
-
+            </a>
+            
+            <a href='https://ajegunle-developers.web.app/' target='_blank'>
             <Card>
                 <Wrap>
                     <Top>
                         <Left>
-                            <h3>TITLE</h3>
-                            <p>description</p>
+                            <h3>DATA COLLECTION APP</h3>
+                            <p>AJ Developers Database</p>
                         </Left>
-                        <Right />
+                        <Right src={DataL}/>
                     </Top>
 
-                    <Avat />
+                    <Avat src={Data}/>
 
                     <Bottom> 
-                        <Rating name="read-only" value={value} readOnly />
+                        <Rating name="half-rating-read" defaultValue={2.5} precision={4.5} readOnly />
                     </Bottom>
                 </Wrap>
             </Card>
-
-            <Card>
-                <Wrap>
-                    <Top>
-                        <Left>
-                            <h3>TITLE</h3>
-                            <p>description</p>
-                        </Left>
-                        <Right />
-                    </Top>
-
-                    <Avat />
-
-                    <Bottom> 
-                        <Rating name="read-only" value={value} readOnly />
-                    </Bottom>
-                </Wrap>
-            </Card>
-
-            <Card>
-                <Wrap>
-                    <Top>
-                        <Left>
-                            <h3>TITLE</h3>
-                            <p>description</p>
-                        </Left>
-                        <Right />
-                    </Top>
-
-                    <Avat />
-
-                    <Bottom> 
-                        <Rating name="read-only" value={value} readOnly />
-                    </Bottom>
-                </Wrap>
-            </Card>
+            </a>
 </>
             ):(
                 null

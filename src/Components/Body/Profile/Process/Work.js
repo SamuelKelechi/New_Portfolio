@@ -27,7 +27,7 @@ function Work() {
 
             <div class="HexContain2">
                 <div class="hexagon2"><span style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}><p style={{color:"white", fontWeight:"bold"}}> 2</p> <img src={Analyse} style={{height:"65px", marginTop:"5px", marginBottom:"12px"}}/></span></div>
-                <h5 style={{marginTop:"38px", textAlign:"center"}}>I Analyse</h5>
+                <h5 style={{marginTop:"38px", textAlign:"center"}}>We Analyse</h5>
             </div>
 
             <div class="HexContain3">

@@ -2,9 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import Typist from 'react-text-typist';
 import Bg from '../../../Images/bg.jpg';
-import Profile from '../../../Images/img.png'
+import Profile from '../../../Images/img.png';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 const Hero = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <MainContain>
       <Wrapper>
@@ -13,16 +20,36 @@ const Hero = () => {
           <br />
           <Type>
             I build
-            <Typist style={{marginLeft:'5px'}} sentences={["Web Applications", "Application Programming Interfaces(API's)", "Third Sentence"]} loop={true} />
+            <Typist style={{marginLeft:'5px'}} sentences={["Client Side", "Server Side", "DevOps Pipeline"]} loop={true} />
           </Type>
           <br />
           <br />
-          <Btn>Contact</Btn>
+          <Btn onClick={handleOpen}>Contact</Btn>
         </Left>
 
         <Imag src={Profile} alt="Profile"/>
 
       </Wrapper>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        
+        <PopUp >
+        <p><CancelIcon onClick={handleClose}/></p>
+          <>
+            <Titled>CONTACT ME</Titled>
+            
+            <input type='string' placeholder='Name'/>
+            <input type='email' placeholder='Email'/>
+            <input type='number' placeholder='Phone Number'/>
+            <textarea type='string' placeholder='Messages'/>
+            <Btn style={{width:'100px', borderRadius:'5px', marginTop:'20px'}}>Send</Btn>
+          </>
+        </PopUp>
+      </Modal>
     </MainContain>
   )
 }
@@ -92,4 +119,53 @@ const Btn = styled.div`
     }
 `
 const Type = styled.div`
+`
+const PopUp = styled(Box)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 350px;
+  box-shadow: 24;
+  color: white;
+  border-radius: 8px;
+  background-color: #2C2C38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0 15px 0;
+
+  p{
+    width: 90%;
+  }
+
+  input{
+    width: 90%;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+    padding: 3px;
+  }
+
+  textarea{
+    height: 110px;
+    width: 90%;
+    border-radius: 5px;
+    padding: 3px;
+    outline: none;
+  }
+
+  @media screen and (max-width: 425px){
+    width: 95%;
+  }
+`
+const Titled = styled.div`
+  font-size: 25px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 425px){
+    font-size: 18px;
+  }
 `
