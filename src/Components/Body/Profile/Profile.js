@@ -6,8 +6,12 @@ import Hero from './Hero/Hero';
 import Work from './Process/Work'
 import Education from './Education/Education'
 import Projects from './Projects/Projects';
+import StackSlider from './StackSlider';
+import Contact from './Contact/Contact';
 
 const Profile = () => {
+  let date = new Date().getFullYear();
+  console.log(date);
 
   return (
     <MainContainer>
@@ -16,13 +20,28 @@ const Profile = () => {
             <br/>
             <Experience />
             <br/>
+            <StackSlider />
+            <br/>
             <Education />
             <br/>
             <Work />
             <br/>
             <Projects />
+            <Contact />
         </MainWrap>
-
+        <Foot>
+          <FootWrap>
+            <div>
+              <span> 🚀 | © {date} All rights reserved</span>
+            </div>
+            <span style={{display:'flex'}}>
+              <Disp>Developed by </Disp>
+              <div style={{color:'lightgray', marginLeft:'5px'}}>
+                Samuel Kelechi
+              </div>
+            </span>
+          </FootWrap>
+        </Foot>
     </MainContainer>
   )
 }
@@ -37,7 +56,8 @@ const MainContainer = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     @media screen and (max-width: 860px){
         width: 95%;
@@ -51,4 +71,27 @@ const MainWrap = styled.div`
     @media screen and (max-width: 425px){
       margin-top: 30px;
     }
+`
+const Foot = styled.div`
+  width: 100%;
+  height: 43px;
+  background-color: #23232D;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+`
+const FootWrap = styled.div`
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+const Disp = styled.div`
+  display: flex;
+
+  @media screen and (max-width: 425px){
+    display: none;
+  }
 `
