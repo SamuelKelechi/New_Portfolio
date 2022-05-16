@@ -5,7 +5,7 @@ import EDHF from './Images/Logo.png';
 import GS from './Images/Logo1.png';
 import UD from './Images/Logo2.png';
 import LotsLogo from './Images/lots.png';
-import DataLogo from './Images/data.png';
+import DataL from './Images/data1.png';
 import UtacLogo from './Images/utac.png';
 
 import Udeme from './Images/udeme.jpg';
@@ -123,7 +123,7 @@ const Projects = () => {
                             <h3>UTAC</h3>
                             <p>An NGO Web Platform</p>
                         </Left>
-                        <Right />
+                        <Right src={UtacLogo}/>
                     </Top>
 
                     <Avat src={UTAC}/>
@@ -183,7 +183,7 @@ const Projects = () => {
                             <h3>LOTS FOUNDATION</h3>
                             <p>A Charity Organization App</p>
                         </Left>
-                        <Right />
+                        <Right src={LotsLogo}/>
                     </Top>
 
                     <Avat src={LOTS}/>
@@ -203,7 +203,7 @@ const Projects = () => {
                             <h3>DATA COLLECTION APP</h3>
                             <p>AJ Developers Database</p>
                         </Left>
-                        <Right />
+                        <Right src={DataL}/>
                     </Top>
 
                     <Avat src={Data}/>
