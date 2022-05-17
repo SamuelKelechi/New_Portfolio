@@ -37,7 +37,7 @@ const Profile = () => {
             <span style={{display:'flex'}}>
               <Disp>Developed by </Disp>
               <div style={{color:'lightgray', marginLeft:'5px'}}>
-                Samuel Kelechi
+                Samuel K.
               </div>
             </span>
           </FootWrap>
