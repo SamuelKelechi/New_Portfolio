@@ -5,9 +5,11 @@ import EDHF from './Images/Logo.png';
 import GS from './Images/Logo1.png';
 import UD from './Images/Logo2.png';
 import LotsLogo from './Images/lots.png';
-import DataL from './Images/data1.png';
 import UtacLogo from './Images/utac.png';
-
+import SecureLogo from './Images/secure.jpg';
+import TeenLogo from './Images/teen.jpg';
+import CodeLogo from './Images/CodeLogo.jpg';
+import DataLogo from './Images/DataLogo.jpg';
 import Udeme from './Images/udeme.jpg';
 import Great from './Images/Great.jpg';
 import Elisha from './Images/Elisha.jpg';
@@ -103,7 +105,7 @@ const Projects = () => {
                             <h3>CODELAB</h3>
                             <p>CodeLab Official Platform</p>
                         </Left>
-                        <Right />
+                        <Right src={CodeLogo}/>
                     </Top>
 
                     <Avat src={CodeLab}/>
@@ -143,7 +145,7 @@ const Projects = () => {
                             <h3>TEENS PROJECT</h3>
                             <p>A Cloned Learning App</p>
                         </Left>
-                        <Right />
+                        <Right src={TeenLogo}/>
                     </Top>
 
                     <Avat src={Teens}/>
@@ -163,7 +165,7 @@ const Projects = () => {
                             <h3>SECURITY APP</h3>
                             <p>A Community Report App</p>
                         </Left>
-                        <Right />
+                        <Right src={SecureLogo}/>
                     </Top>
 
                     <Avat src={Report}/>
@@ -203,7 +205,7 @@ const Projects = () => {
                             <h3>DATA COLLECTION APP</h3>
                             <p>AJ Developers Database</p>
                         </Left>
-                        <Right src={DataL}/>
+                        <Right src={DataLogo}/>
                     </Top>
 
                     <Avat src={Data}/>

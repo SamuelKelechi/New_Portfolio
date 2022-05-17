@@ -20,7 +20,7 @@ const Hero = () => {
           <br />
           <Type>
             I build
-            <Typist style={{marginLeft:'5px'}} sentences={["Client Side", "Server Side", "DevOps Pipeline"]} loop={true} />
+            <Typist style={{marginLeft:'5px'}} sentences={["Web Applications","Client Side", "Server Side", "DevOps Pipeline"]} loop={true} />
           </Type>
           <br />
           <br />
@@ -45,7 +45,7 @@ const Hero = () => {
             <input type='string' placeholder='Name'/>
             <input type='email' placeholder='Email'/>
             <input type='number' placeholder='Phone Number'/>
-            <textarea type='string' placeholder='Messages'/>
+            <textarea type='string' placeholder='Message'/>
             <Btn style={{width:'100px', borderRadius:'5px', marginTop:'20px'}}>Send</Btn>
           </>
         </PopUp>
