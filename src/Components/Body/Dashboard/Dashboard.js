@@ -75,19 +75,19 @@ function Dashboard() {
                     <br />
                     <span>
                         <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
-                        Redux, Context API, Material UI, Styled-Components, PWA...
+                        React, Redux, Context API, Material UI, Styled-Components, PWA...
                     </span>
                     <br/>
                     <br/>
                     <span>
                         <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
-                        ExpressJS, MongoDB, Firebase, 
+                        Node, Express, MongoDB, Firebase 
                     </span>
                     <br/>
                     <br/>
                     <span>
                         <CircleIcon style={{ color:'#FFC107', fontSize:'8px', paddingRight:'3px'}}/>
-                        LAMP, CI/CD, Git/GitHub, Heroku 
+                        Docker, LAMP, CI/CD, Git/GitHub, Heroku 
                     </span>
                 </OtherStacks>
                 <Line></Line>
