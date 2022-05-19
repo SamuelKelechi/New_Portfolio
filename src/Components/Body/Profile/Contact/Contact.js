@@ -7,7 +7,7 @@ const Contact = () => {
     <Container>
         <Wrapper>
            <MapHold>
-                <iframe style={{height:'100%', width:'100%', borderRadius:'8px'}} id="gmap_canvas" src="https://maps.google.com/maps?q=Ajeromi%20ifelodun&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe style={{height:'100%', width:'100%', borderRadius:'8px'}} id="gmap_canvas" src="https://maps.google.com/maps?q=Ajeromi%20ifelodun&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"></iframe>
             </MapHold>
            <ConctHold>
                 <Title>Contact Me</Title>

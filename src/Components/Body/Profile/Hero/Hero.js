@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import Typist from 'react-text-typist';
 import Bg from '../../../Images/bg.jpg';
@@ -6,11 +6,38 @@ import Profile from '../../../Images/img.png';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import CancelIcon from '@mui/icons-material/Cancel';
+import {collection, addDoc, Timestamp} from 'firebase/firestore';
+import { toast } from 'react-toastify';
+import {db} from '../../../../Base';
 
 const Hero = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState();
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [time, setTime] = useState(Timestamp.now().toDate())
+  
+  const usersCollectionRef = collection(db, "portfolio")
+
+  // const que = query(usersCollectionRef, orderBy("time", "desc"))
+
+  const Send = () => {
+    addDoc(usersCollectionRef, {name:name, phone:phone, email:email, message:message, time:time})
+    .then(() => {
+      toast("Message Sent Successfully", {type: "success"});
+    })
+    .catch(err=>{
+      toast("Error sending message", {type: "error"});
+    })
+    setEmail('');
+    setName('');
+    setPhone('');
+    setMessage('');
+  }
 
   return (
     <MainContain>
@@ -39,15 +66,30 @@ const Hero = () => {
         
         <PopUp >
         <p><CancelIcon onClick={handleClose}/></p>
-          <>
+          <form>
             <Titled>CONTACT ME</Titled>
             
-            <input type='string' placeholder='Name'/>
-            <input type='email' placeholder='Email'/>
-            <input type='number' placeholder='Phone Number'/>
-            <textarea type='string' placeholder='Message'/>
-            <Btn style={{width:'100px', borderRadius:'5px', marginTop:'20px'}}>Send</Btn>
-          </>
+            <input onChange={(e) => {
+              setName(e.target.value)
+            }} type='text' placeholder='Name' name='name'/>
+
+            <input onChange={(e) => {
+              setEmail(e.target.value)
+            }} type='email' placeholder='Email' name='email'/>
+
+            <input onChange={(e) => {
+              setPhone(e.target.value)
+            }} type='number' placeholder='Phone Number' name='phone'/>
+
+            <textarea onChange={(e) => {
+              setMessage(e.target.value)
+            }} type='string' placeholder='Message' name='message'/>
+            <Btn disabled={!message} style={{width:'100px', borderRadius:'5px', marginTop:'20px'}}  type="submit" value="Send" onClick={() => {
+              Send();
+              handleClose();
+              console.log('Sending')
+            }}>Send</Btn>
+          </form>
         </PopUp>
       </Modal>
     </MainContain>
@@ -104,7 +146,7 @@ const Title = styled.div`
   font-weight: bold;
   width: 100%;
 `
-const Btn = styled.div`
+const Btn = styled.button`
   height: 40px;
   width: 150px;
   display: flex;
@@ -113,6 +155,8 @@ const Btn = styled.div`
   background-color: #FFC107;
   color: black;
   cursor: pointer;
+  outline: none;
+  border: none;
 
   @media screen and (max-width: 680px){
       margin-bottom: 30px;
@@ -126,7 +170,7 @@ const PopUp = styled(Box)`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 350px;
+  height: 380px;
   box-shadow: 24;
   color: white;
   border-radius: 8px;
@@ -135,6 +179,14 @@ const PopUp = styled(Box)`
   flex-direction: column;
   align-items: center;
   padding: 15px 0 15px 0;
+
+  form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+  }
 
   p{
     width: 90%;
